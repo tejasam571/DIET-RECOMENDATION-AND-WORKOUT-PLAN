@@ -86,22 +86,24 @@ This project uses machine learning algorithms and Python programming to create p
 
 ## Dataset
 
-- The dataset used in this project consists of [briefly describe the dataset, e.g., user demographics, dietary preferences, workout history, etc.].
-- It can be found [mention where the dataset can be accessed or if it is provided in the repository].
+- The dataset used in this project consists of FOOD , Nutrition distribution , workout plan CSV file
 
 ## Model Training
 
-- The model is trained using [mention the algorithms used, e.g., decision trees, random forest, neural networks, etc.].
-- Training involves [briefly describe the training process, e.g., feature selection, hyperparameter tuning, etc.].
+- The model is trained using k mean and random forest algorithm 
+- Training involves classification and decission tree .
 
 ## Evaluation
 
-- The model's performance is evaluated using [mention metrics, e.g., accuracy, precision, recall, F1-score, etc.].
+- The model's performance is evaluated using [- **Accuracy**: Correct BMI predictions  
+- **Precision**: Relevant food/workout suggestions  
+- **Recall**: Identified appropriate BMI categories  
+- **F1-Score**: Balanced recommendation effectiveness  ].
 - Results and evaluation metrics are stored in the `output/results` directory.
 
 ## Results
 
-- [Provide a summary of the results obtained from the model evaluation, including any graphs or tables generated.]
+- The model evaluation for the 'Diet Recommendation and Workout Plan' project showed accurate BMI predictions and personalized workout and food plans. The results were summarized in tables, with graphs displaying BMI categories and recommended plans based on user data.
 
 ## Contributing
 
@@ -119,8 +121,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Contact
 
 For any questions or suggestions, feel free to contact:
-- **Name**: [Your Name]
-- **Email**: [Your Email]
+- **Name**: TEJAS A M
+- **Email**: tejasam571@gmail.com
 
 ---
 
