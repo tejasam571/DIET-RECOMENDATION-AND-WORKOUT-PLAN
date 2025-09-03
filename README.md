@@ -58,6 +58,11 @@ This project uses machine learning algorithms and Python programming to create p
    pip install -r requirements.txt
    ```
 
+3. **RUNNING**:
+   ```bash
+   streamlit run app3.py
+    ```
+   
 ## Usage
 
 1. **Data Preprocessing**:
