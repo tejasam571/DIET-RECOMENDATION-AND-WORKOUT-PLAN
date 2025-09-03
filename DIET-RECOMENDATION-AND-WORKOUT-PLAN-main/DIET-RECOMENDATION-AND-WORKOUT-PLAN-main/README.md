@@ -1,7 +1,3 @@
-
-
----
-
 # DIET RECOMMENDATION AND WORKOUT PLAN
 
 ## Overview
@@ -11,6 +7,7 @@ This project uses machine learning algorithms and Python programming to create p
 - [Project Structure](#project-structure)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Docker Deployment](#docker-deployment)
 - [Dataset](#dataset)
 - [Model Training](#model-training)
 - [Evaluation](#evaluation)
@@ -20,24 +17,27 @@ This project uses machine learning algorithms and Python programming to create p
 - [Contact](#contact)
 
 ## Project Structure
-```
 ├── data
-│   ├── raw_data.csv          # Raw data used for training and evaluation
-│   ├── processed_data.csv    # Data after preprocessing
+│ ├── raw_data.csv # Raw data used for training and evaluation
+│ ├── processed_data.csv # Data after preprocessing
 ├── notebooks
-│   ├── data_preprocessing.ipynb  # Notebook for data cleaning and preprocessing
-│   ├── model_training.ipynb      # Notebook for training models
-│   ├── evaluation.ipynb          # Notebook for model evaluation
+│ ├── data_preprocessing.ipynb # Notebook for data cleaning and preprocessing
+│ ├── model_training.ipynb # Notebook for training models
+│ ├── evaluation.ipynb # Notebook for model evaluation
 ├── src
-│   ├── data_preprocessing.py     # Script for data preprocessing
-│   ├── model.py                  # Script for model architecture and training
-│   ├── evaluation.py             # Script for evaluating the models
+│ ├── data_preprocessing.py # Script for data preprocessing
+│ ├── model.py # Script for model architecture and training
+│ ├── evaluation.py # Script for evaluating the models
 ├── output
-│   ├── model.pkl                 # Trained model file
-│   ├── results                   # Folder containing results (graphs, metrics)
-├── README.md
-└── requirements.txt
-```
+│ ├── model.pkl # Trained model file
+│ ├── results # Folder containing results (graphs, metrics)
+├── app3.py # Main Streamlit app
+├── requirements.txt
+├── Dockerfile
+└── README.md
+
+bash
+Copy code
 
 ## Installation
 
@@ -45,85 +45,95 @@ This project uses machine learning algorithms and Python programming to create p
    ```bash
    git clone https://github.com/your-username/diet-recommendation-workout-plan.git
    cd diet-recommendation-workout-plan
-   ```
+Set up a virtual environment (optional but recommended):
 
-2. **Set up a virtual environment** (optional but recommended):
-   ```bash
-   python3 -m venv env
-   source env/bin/activate  # On Windows use `env\Scripts\activate`
-   ```
+bash
+Copy code
+python3 -m venv env
+source env/bin/activate  # On Windows use `env\Scripts\activate`
+Install the required packages:
 
-3. **Install the required packages**:
-   ```bash
-   pip install -r requirements.txt
-   ```
+bash
+Copy code
+pip install -r requirements.txt
+Usage
+Run the Streamlit app locally:
 
-## Usage
+bash
+Copy code
+streamlit run app3.py
+Open your browser and go to:
 
-1. **Data Preprocessing**:
-   - Run the data preprocessing script to clean and prepare the dataset:
-     ```bash
-     python src/data_preprocessing.py
-     ```
+arduino
+Copy code
+http://localhost:8501
+Docker Deployment
+You can also run this project inside a Docker container.
 
-2. **Model Training**:
-   - Train the machine learning model using the following command:
-     ```bash
-     python src/model.py
-     ```
+Build the Docker Image
+bash
+Copy code
+docker build -t diet-app .
+Run the Docker Container
+bash
+Copy code
+docker run -p 8501:8501 diet-app
+Now open your browser and visit:
 
-3. **Model Evaluation**:
-   - Evaluate the model's performance:
-     ```bash
-     python src/evaluation.py
-     ```
+arduino
+Copy code
+http://localhost:8501
+(or use your machine’s IP address if running on a server).
 
-4. **Generate Recommendations**:
-   - Use the trained model to generate personalized diet and workout plans:
-     ```bash
-     python src/recommendation.py
-     ```
+Example: Running on a server
+If deployed on a server with IP 192.168.29.41, you can access it at:
 
-## Dataset
+cpp
+Copy code
+http://192.168.29.41:8501
+Dataset
+The dataset used in this project consists of food, nutrition distribution, and workout plan CSV files.
 
-- The dataset used in this project consists of FOOD , Nutrition distribution , workout plan CSV file
+Model Training
+The model is trained using K-Means and Random Forest algorithms.
 
-## Model Training
+Training involves classification and decision tree methods.
 
-- The model is trained using k mean and random forest algorithm 
-- Training involves classification and decission tree .
+Evaluation
+The model's performance is evaluated using:
 
-## Evaluation
+Accuracy: Correct BMI predictions
 
-- The model's performance is evaluated using [- **Accuracy**: Correct BMI predictions  
-- **Precision**: Relevant food/workout suggestions  
-- **Recall**: Identified appropriate BMI categories  
-- **F1-Score**: Balanced recommendation effectiveness  ].
-- Results and evaluation metrics are stored in the `output/results` directory.
+Precision: Relevant food/workout suggestions
 
-## Results
+Recall: Identified appropriate BMI categories
 
-- The model evaluation for the 'Diet Recommendation and Workout Plan' project showed accurate BMI predictions and personalized workout and food plans. The results were summarized in tables, with graphs displaying BMI categories and recommended plans based on user data.
+F1-Score: Balanced recommendation effectiveness
 
-## Contributing
+Results and evaluation metrics are stored in the output/results directory.
 
+Results
+The model evaluation for the 'Diet Recommendation and Workout Plan' project showed accurate BMI predictions and personalized workout and food plans. The results were summarized in tables, with graphs displaying BMI categories and recommended plans based on user data.
+
+Contributing
 Contributions are welcome! Please follow these steps to contribute:
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature-branch`).
-3. Commit your changes (`git commit -m 'Add some feature'`).
-4. Push to the branch (`git push origin feature-branch`).
-5. Open a Pull Request.
 
-## License
+Fork the repository.
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Create a new branch (git checkout -b feature-branch).
 
-## Contact
+Commit your changes (git commit -m 'Add some feature').
 
+Push to the branch (git push origin feature-branch).
+
+Open a Pull Request.
+
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+Contact
 For any questions or suggestions, feel free to contact:
-- **Name**: TEJAS A M
-- **Email**: tejasam571@gmail.com
 
----
+Name: TEJAS A M
 
-Feel free to customize the above template according to your specific needs!
+Email: tejasam571@gmail.com
